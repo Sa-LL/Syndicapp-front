@@ -5,7 +5,7 @@ const authReducer = (state = { authData: null }, action) => {
 		case FETCH_USERS:
 			return state;
 		case REGISTER:
-			return state;
+			return action.data;
 		case AUTH:
 			localStorage.setItem(
 				'profile',

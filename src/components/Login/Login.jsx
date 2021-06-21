@@ -1,26 +1,19 @@
 import { useState } from 'react';
-
 import {
 	Button,
 	CssBaseline,
 	TextField,
 	FormControlLabel,
 	Checkbox,
+	Link,
+	Paper,
+	Grid,
+	Typography,
 } from '@material-ui/core';
-import Link from '@material-ui/core/Link';
-
-import Paper from '@material-ui/core/Paper';
-// import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-
 import Icono from '../../images/icono.png';
-
 import useStyles from './styles';
-
 import { useDispatch } from 'react-redux';
 import { signin } from '../../actions/auth';
-
 import { useHistory } from 'react-router-dom';
 
 export default function Login() {
@@ -28,6 +21,7 @@ export default function Login() {
 	const dispatch = useDispatch();
 
 	const history = useHistory();
+
 	// States
 
 	const [login, setLogin] = useState({
@@ -134,16 +128,3 @@ export default function Login() {
 		</Grid>
 	);
 }
-
-// function Copyright() {
-// 	return (
-// 		<Typography variant='body2' color='textSecondary' align='center'>
-// 			{'Copyright © '}
-// 			<Link color='inherit' href='https://material-ui.com/'>
-// 				Your Website
-// 			</Link>{' '}
-// 			{new Date().getFullYear()}
-// 			{'.'}
-// 		</Typography>
-// 	);
-// }
