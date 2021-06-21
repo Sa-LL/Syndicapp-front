@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Input } from '@material-ui/core';
 import { useSelector } from 'react-redux';
 import Title from './Title';
 import MaterialTable from 'material-table';
@@ -20,7 +19,6 @@ import Search from '@material-ui/icons/Search';
 import ViewColumn from '@material-ui/icons/ViewColumn';
 import { forwardRef } from 'react';
 import { useDispatch } from 'react-redux';
-import { register } from '../../../../actions/auth';
 import { createEvents } from '../../../../actions/eventos';
 
 const tableIcons = {
@@ -55,10 +53,6 @@ export default function Tabla() {
 	const users = useSelector((state) => state.gestor);
 	const dispatch = useDispatch();
 	let flag = false;
-	const [password, setPassword] = useState('');
-	const handlePassword = (e) => {
-		setPassword(e);
-	};
 	const [state, setState] = useState({
 		columns: [
 			{
