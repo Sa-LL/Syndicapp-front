@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { Grid, Tab, Tabs, Paper, Typography } from '@material-ui/core';
+import { useEffect } from 'react';
+import { Grid } from '@material-ui/core';
 
 import useStyles from './stylesSindicatos';
 import ToolbarCustom from '../Customs/ToolbarCustom/ToolbarCustom';
